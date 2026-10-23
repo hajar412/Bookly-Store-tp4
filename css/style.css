@@ -219,8 +219,20 @@ h1,
 .section-heading p {
     margin: 0;
 }
+ 
+main .table-responsive {
+    background-color: #fff;
+    border: 1px solid var(--warm-beige);
+    border-radius: 12px;
+}
 
+main .table-responsive .table {
+    margin-bottom: 0;
+}
 
+main .table-responsive tbody tr:last-child td {
+    border-bottom: none;
+}
 
 
 footer {
