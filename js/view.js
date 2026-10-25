@@ -3,14 +3,11 @@ const totalCustomers = document.querySelector("#totalCustomers");
 const totalProducts = document.querySelector("#totalProducts");
 const totalOrders = document.querySelector("#totalOrders");
 const totalAmount = document.querySelector("#totalAmount");
-
 const categoryFilter = document.querySelector("#categoryFilter");
 const btnAll = document.querySelector("#btnAll");
 const statusButtons = document.querySelectorAll(".status-btn");
-
 const resultCount = document.querySelector("#resultCount");
 const ordersTableBody = document.querySelector("#ordersTableBody");
-
 const modalTitle = document.querySelector("#modalTitle");
 const modalCustomer = document.querySelector("#modalCustomer");
 const modalCity = document.querySelector("#modalCity");
@@ -18,7 +15,6 @@ const modalDate = document.querySelector("#modalDate");
 const modalStatus = document.querySelector("#modalStatus");
 const modalItems = document.querySelector("#modalItems");
 const modalTotal = document.querySelector("#modalTotal");
-
 const orderModal = new bootstrap.Modal(document.querySelector("#orderModal"));
 
 
@@ -34,6 +30,7 @@ const statusLabels = {
 const getStatusClass = (status) => {
     if (status === "Livree") return "status-delivered";
     if (status === "En attente") return "status-pending";
+    if (status === "Annulee" || status === "Annulée") return "status-cancelled";
     return "status-cancelled";
 };
 
